@@ -1,0 +1,13 @@
+.Quiz {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    width: 100%;
+    background:  linear-gradient(90deg, #867ad1 0%, #f393b8 100%);
+}
+
+.Quiz h1 {
+    color: #fff;
+    margin-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
