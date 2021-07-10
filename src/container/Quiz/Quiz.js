@@ -7,14 +7,20 @@ class Quiz extends Component {
     state = {
         quiz: [
             {
+                question: 'Какого цвета твои глаза?', 
+                rightAnswerId: 2,
                 answers: [
-                    {text: 'Question 1'},
-                    {text: 'Question 2'},
-                    {text: 'Question 3'},
-                    {text: 'Question 4'}
+                    {text: 'Черный', id: 1},
+                    {text: 'Голубые', id: 2},
+                    {text: 'Карие', id: 3},
+                    {text: 'Зеленые', id: 4}
                 ]
             }
         ]
+    }
+
+    onAnswerClickHandler = (answerId) => {
+        console.log('Answer Id: ', answerId);
     }
 
 
@@ -22,9 +28,12 @@ class Quiz extends Component {
         return (
             <div className={classes.Quiz}>
                     <div className={classes.QuizWrapper}>
-                        <h1>Ответьте на все вопросы</h1>
+                        <h1>{this.props.question}</h1>
+
                         <ActiveQuiz 
                             answers={this.state.quiz[0].answers}
+                            question={this.state.quiz[0].question}
+                            onAnswerClick={this.onAnswerClickHandler}
                         />
                     </div>
             </div>

@@ -2,12 +2,16 @@ import React from 'react'
 import classes from './ActiveQuiz.css'
 import AnswersList from './AnswersList/AnswersList'
 
+// import Quiz from '../../container/Quiz/Quiz'
+
 const ActiveQuiz = props => (
     <div className={classes.ActiveQuiz}>
         <p className={classes.Question}>
             <span>
-                <strong>2.</strong>&nbsp;
-                Как дела?
+                <strong>
+                    2.
+                </strong>&nbsp;
+                {props.question}
             </span>
 
             <small>4 из 12</small>
@@ -16,6 +20,7 @@ const ActiveQuiz = props => (
 
         <AnswersList
             answers={props.answers}
+            onAnswerClick={props.onAnswerClick}
         />
 
     </div>
