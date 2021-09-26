@@ -8,6 +8,7 @@ class Quiz extends Component {
         activeQuestion: 1,
         quiz: [
             {
+                
                 question: 'Какого цвета твои глаза?', 
                 rightAnswerId: 2,
                 id:1,
